@@ -2,23 +2,34 @@
   "name": "Car Assistant - Petev",
   "short_name": "CarAssistant",
   "description": "Твоят асистент за колата - документи, глоби, застраховка, ГТП",
-  "start_url": "/car-assistant/",
-  "scope": "/car-assistant/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0ea5e9",
   "icons": [
     {
-      "src": "/car-assistant/assets/icon-192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/car-assistant/assets/icon-512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
