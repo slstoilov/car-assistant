@@ -5,33 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Car Assistant</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0f172a">
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3774/3774083.png">
+<meta name="theme-color" content="#0ea5e9">
 <style>
-body{font-family:system-ui;background:#0f172a;color:white;margin:0;padding:20px;text-align:center}
-.card{background:#1e293b;padding:20px;border-radius:16px;margin:20px auto;max-width:400px}
-button{background:#3b82f6;color:white;border:0;padding:12px 20px;border-radius:10px;font-size:16px;width:100%;margin-top:10px}
-input{width:100%;padding:10px;border-radius:8px;border:0;margin:6px 0;box-sizing:border-box}
+body{margin:0;font-family:system-ui;background:#0f172a;color:#e2e8f0;display:flex;flex-direction:column;align-items:center;padding:20px}
+h1{margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:400px;width:100%}
+.card{background:#1e293b;border-radius:16px;padding:12px;text-align:center}
+.main-icon img{width:120px;height:120px;border-radius:24px;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.main-icon{margin:20px 0}
 </style>
 </head>
 <body>
-<h1>🚗 Car Assistant</h1>
-<p>Твоят асистент за кола е активен!</p>
-<div class="card">
-<h3>Добави разход</h3>
-<input placeholder="Километри" type="number">
-<input placeholder="Литри / Сума лв">
-<button onclick="alert('Запазено!')">Запази</button>
+<h1>Car Assistant - Petev</h1>
+<div class="main-icon"><img src="assets/icon-512.png" alt="icon"></div>
+<p>Финална икона - близнаци 1:1, без стърчане върху синьото</p>
+<div class="grid">
+<div class="card">🚗<br>Кола</div>
+<div class="card">📄<br>Документи</div>
+<div class="card">🚓<br>Глоби</div>
+<div class="card">🛡️<br>Застраховка</div>
+<div class="card">🔧<br>ГТП</div>
+<div class="card">🛢️<br>Масло</div>
+<div class="card">🛣️<br>Винетка</div>
+<div class="card">⛽<br>Гориво</div>
 </div>
-<div class="card">
-<p>Сайтът е PWA готов и може да стане APK!</p>
-<button onclick="alert('Инсталирай от менюто ⋮ -> Install')">Инсталирай като приложение</button>
-</div>
-<script>
-if('serviceWorker' in navigator){
-  // minimal sw
-  navigator.serviceWorker.register('data:text/javascript,console.log("sw")').catch(()=>{});
-}
-</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js')}</script>
 </body>
 </html>
